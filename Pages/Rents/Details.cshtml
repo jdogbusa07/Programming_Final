@@ -1,0 +1,12 @@
+@page "{id:int}"
+@model DetailsModel
+
+<h1>Rent Details</h1>
+
+<div>
+    <strong>Rent ID:</strong> @Model.Rent.RentID <br />
+    <strong>Rent Date:</strong> @Model.Rent.RentDate.ToShortDateString()
+</div>
+
+<a asp-page="Edit" asp-route-id="@Model.Rent.RentID">Edit</a> |
+<a asp-page="Index">Back to List</a>

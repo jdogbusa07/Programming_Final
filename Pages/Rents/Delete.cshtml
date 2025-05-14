@@ -1,0 +1,15 @@
+@page "{id:int}"
+@model DeleteModel
+
+<h1>Delete Rental</h1>
+
+<h4>Are you sure you want to delete this?</h4>
+<div>
+    <strong>Date:</strong> @Model.Rent.RentDate.ToShortDateString()
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Rent.RentID" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-page="Index">Cancel</a>
+</form>
